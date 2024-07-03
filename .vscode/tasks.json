@@ -11,6 +11,8 @@
                 "-I${workspaceFolder}/include",
                 "-L${workspaceFolder}/lib",
                 "${workspaceFolder}/src/main.cpp",
+                "${workspaceFolder}/src/display.cpp",
+                "${workspaceFolder}/src/display.h",
                 "${workspaceFolder}/src/glad.c",
                 "-lglfw3dll",
                 "-o",
@@ -26,7 +28,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "compiler: C:/C:/path/to/g++.exe"
+            "detail": "compiler: C:/MinGW/bin/g++.exe"
         }
     ]
 }
