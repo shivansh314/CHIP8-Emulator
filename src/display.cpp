@@ -102,9 +102,11 @@ void Display::render()
     }
 
     glfwSwapBuffers(window);
+    glfwPollEvents();
 }
 
 void Display::clear()
 {
+    glClear(GL_COLOR_BUFFER_BIT);
     memset(displayArray, 0, cols * rows);
 }

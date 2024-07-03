@@ -5,10 +5,10 @@ int main()
 
     // making a new display
     Display display;
-
+    display.setPixel(0, 0);
     while (display.isOpen())
     {
-        display.setPixel(0, 0);
+
         display.render();
     }
 
