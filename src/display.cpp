@@ -84,13 +84,15 @@ void Display::render()
 {
     glClear(GL_COLOR_BUFFER_BIT);
 
+    // calculate x and y position for the pixel
     for (int i = 0; i < cols * rows; ++i)
     {
-        int x = (i % cols) * scale;
-        int y = (i / cols) * scale;
 
         if (displayArray[i])
         {
+            int x = (i % cols) * scale;
+            int y = (i / cols) * scale;
+
             glColor3f(1.0f, 1.0f, 1.0f); // Set pixel color to black
             glBegin(GL_QUADS);
             glVertex2i(x, y);
@@ -102,6 +104,7 @@ void Display::render()
     }
 
     glfwSwapBuffers(window);
+    glfwSwapInterval(1);
     glfwPollEvents();
 }
 
@@ -109,4 +112,9 @@ void Display::clear()
 {
     glClear(GL_COLOR_BUFFER_BIT);
     memset(displayArray, 0, cols * rows);
+}
+
+void Display ::test()
+{
+    cout << "The display is working properly";
 }

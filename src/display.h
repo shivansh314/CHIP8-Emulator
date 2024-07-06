@@ -16,6 +16,7 @@ public:
     bool setPixel(int x, int y);
     void render();
     void clear();
+    void test();
 
 private:
     GLFWwindow *window;

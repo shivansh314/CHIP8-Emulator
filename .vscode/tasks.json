@@ -13,6 +13,8 @@
                 "${workspaceFolder}/src/main.cpp",
                 "${workspaceFolder}/src/display.cpp",
                 "${workspaceFolder}/src/display.h",
+                "${workspaceFolder}/src/CPU.cpp",
+                "${workspaceFolder}/src/CPU.h",
                 "${workspaceFolder}/src/glad.c",
                 "-lglfw3dll",
                 "-o",
