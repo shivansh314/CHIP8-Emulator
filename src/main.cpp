@@ -9,7 +9,7 @@ int main()
 
     display.setPixel(0, 0);
     cpu.loadSpritesIntoMemory();
-
+    
     while (display.isOpen())
     {
 

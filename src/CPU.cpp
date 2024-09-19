@@ -55,19 +55,3 @@ void CPU::loadSpritesIntoMemory()
         memory[i] = sprites[i];
     }
 }
-
-void CPU::loadProgramIntoMemory(const std::vector<uint8_t> &program)
-{
-    // Ensure that program can fit into memory starting at 0x200
-    if (program.size() > (4096 - 0x200))
-    {
-        std::cerr << "Error: Program size exceeds available memory space.\n";
-        return;
-    }
-
-    // Copy program data into memory starting at address 0x200
-    for (size_t loc = 0; loc < program.size(); ++loc)
-    {
-        memory[0x200 + loc] = program[loc];
-    }
-}

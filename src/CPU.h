@@ -17,11 +17,11 @@ public:
 
     //function
     void loadSpritesIntoMemory();
-    void loadProgramIntoMemory(const std::vector<uint8_t> &program)
+  
 
-        private :
-        // memory
-        array<uint8_t, 4096> memory;
+private:
+    // memory
+    array<uint8_t, 4096> memory;
     // 16 8-bit register
     std::array<uint8_t, 16> v;
     // Stores memory addresses. Set this to 0 since we aren't storing anything at initialization.
